@@ -1,6 +1,38 @@
 <html>
-    <head></head>
-    <body>
+    <head>
+        <style>
+        #queue{
+            float: left;
+            width: 100px;
+        }
+        #parkingLot{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: space-between;
+            height: 100vh;
+        }
+        .odd{
+            background-color: rgba(0, 0, 0, .3);
+        }
+        .space{
+            width: 250px;
+            float: right;
+            display: block;
+            height: 300px;
+            border: black solid 1px;
+            text-align: center;
+        }
+        
+        .open{
+            font-size: 30px;
+        }
+        </style>
+    </head>
+    <body id="proxy">
+        
+        <div id="queue"></div>
+        <div id="parkingLot"></div>
+        
         <script src="index.js"></script>
     </body>
 </html>
