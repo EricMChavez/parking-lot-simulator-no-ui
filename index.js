@@ -1,6 +1,14 @@
 'use strict';
-let queue = carFactory(100);
-let parkLot = lotFactory(10);
+let queue = [];
+let parkLot = [];
+
+function start(cars, spaces, time) {
+	queue = carFactory(cars);
+	parkLot = lotFactory(spaces);
+	clock(time);
+}
+
+//
 function carFactory(num) {
 	let cars = [];
 	for (let i = 0; i < num; i++) {
@@ -41,6 +49,7 @@ function plateFactory() {
 	return plate;
 }
 
+//
 function timerFactory() {
 	return Math.ceil(Math.random() * 50);
 }
@@ -106,7 +115,6 @@ function updateUI() {
 	}
 	document.getElementById('queue').innerHTML = queueUI;
 }
+
 proxy.addEventListener('tick', updateUI);
 proxy.addEventListener('tick', tickDown);
-
-clock(100);

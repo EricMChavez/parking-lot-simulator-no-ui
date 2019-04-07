@@ -10,6 +10,7 @@
             flex-wrap: wrap;
             align-items: space-between;
             height: 100vh;
+            
         }
         .odd{
             background-color: rgba(0, 0, 0, .3);
@@ -22,7 +23,14 @@
             border: black solid 1px;
             text-align: center;
         }
-        
+        button{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 15px;
+            background-color: blue;
+            color: white
+        }
         .open{
             font-size: 30px;
         }
@@ -32,7 +40,7 @@
         
         <div id="queue"></div>
         <div id="parkingLot"></div>
-        
+        <button onclick="start(100, 10, 100)">START!</button>
         <script src="index.js"></script>
     </body>
 </html>
